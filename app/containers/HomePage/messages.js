@@ -29,4 +29,8 @@ export default defineMessages({
     id: `${scope}.tryme.atPrefix`,
     defaultMessage: '@',
   },
+  languageAppTitle: {
+    id: `${scope}.language_app_title`,
+    defaultMessage: 'Language Checker App',
+  },
 });
