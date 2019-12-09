@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const TextArea = styled.div`
-	height: 80vh;
+	height: 83vh;
 	border: 3px solid #cccccc;
 	padding: 5px;
 	font-family: Tahoma, sans-serif;

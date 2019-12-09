@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/daa4aa94-7109-4dca-abf5-64351ccfd18a/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/LanguageCheckerApp",
+    "appService.deploySubpath": ""
+}

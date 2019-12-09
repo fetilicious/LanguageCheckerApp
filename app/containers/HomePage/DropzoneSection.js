@@ -4,7 +4,6 @@ const DropzoneSection = styled.div`
     height: 10vh;
     width: 100%;
     text-align: center;
-    line-height: 5vh;
     background: #c2d6d6;
     border-style: dotted;
     border-radius: 5px;

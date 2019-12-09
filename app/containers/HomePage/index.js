@@ -18,6 +18,7 @@ import DictionaryView from "./DictionaryView";
 import TextSection from './TextSection';
 import CenteredSection from './CenteredSection';
 import TextArea from './TextArea';
+import Banner from './Banner';
 
 let allowedWords = ["hello", "world"];
 
@@ -118,9 +119,9 @@ export default function HomePage() {
         />
       <div>
         <CenteredSection>
-          <h2>
+          <Banner>
             Language App
-          </h2>
+          </Banner>
         </CenteredSection>
         <Section>
           <TextSection>
