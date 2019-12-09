@@ -35,9 +35,6 @@ export default function HomePage() {
     let resultHTML = "";
     console.log(inputText);
     for (let i = 0; i < inputText.length; i++) {
-      if (inputText[i] === '\n') {
-        resultHTML += "<br>";
-      }
       if (allowedWords.includes(inputText.substring(i,i+1))){
         resultHTML += inputText.substring(i,i+1);
       } else if (i < inputText.length-1 && allowedWords.includes(inputText.substring(i,i+2))){
@@ -46,6 +43,8 @@ export default function HomePage() {
       } else if (i < inputText.length-2 && allowedWords.includes(inputText.substring(i,i+3))){
         resultHTML += inputText.substring(i,i+3);
         i+=2;
+      } else if (inputText[i] === '\n') {
+        resultHTML += "<br>";
       } else {
         resultHTML += "<b style=\"color:red\">" + inputText.substring(i,i+1) + "</b>";
       }
@@ -93,8 +92,8 @@ export default function HomePage() {
     if (!textArea.current) {
       return;
     }
-    let inputText = textArea.current.innerText;
-    window.localStorage.setItem("autosave", JSON.stringify(inputText));
+    let inputText = textArea.current.innerHTML;
+    window.localStorage.setItem("autosave", inputText);
     setTimeout(autoSave, autosaveTimerInterval);
   }
   setTimeout(autoSave, autosaveTimerInterval);
@@ -109,7 +108,7 @@ export default function HomePage() {
   }
 
   // Autosave rehydrate
-  let autosaveHTML = JSON.parse(window.localStorage.getItem("autosave"));
+  let autosaveHTML = window.localStorage.getItem("autosave");
   if (!autosaveHTML) {
     autosaveHTML = "";
   }
