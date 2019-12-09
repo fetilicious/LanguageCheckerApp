@@ -30,10 +30,14 @@ export default function HomePage() {
   function wordCheck() {
     console.log("checking");
 
-    let inputText = textArea.current.textContent;
+    let inputText = textArea.current.innerText;
 
     let resultHTML = "";
+    console.log(inputText);
     for (let i = 0; i < inputText.length; i++) {
+      if (inputText[i] === '\n') {
+        resultHTML += "<br>";
+      }
       if (allowedWords.includes(inputText.substring(i,i+1))){
         resultHTML += inputText.substring(i,i+1);
       } else if (i < inputText.length-1 && allowedWords.includes(inputText.substring(i,i+2))){
@@ -89,7 +93,7 @@ export default function HomePage() {
     if (!textArea.current) {
       return;
     }
-    let inputText = textArea.current.textContent;
+    let inputText = textArea.current.innerText;
     window.localStorage.setItem("autosave", JSON.stringify(inputText));
     setTimeout(autoSave, autosaveTimerInterval);
   }
