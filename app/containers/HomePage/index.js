@@ -35,14 +35,15 @@ export default function HomePage() {
     let resultHTML = "";
     console.log(inputText);
     for (let i = 0; i < inputText.length; i++) {
-      if (allowedWords.includes(inputText.substring(i,i+1))){
-        resultHTML += inputText.substring(i,i+1);
+
+      if (i < inputText.length-2 && allowedWords.includes(inputText.substring(i,i+3))){
+        resultHTML += inputText.substring(i,i+3);
+        i+=2;
       } else if (i < inputText.length-1 && allowedWords.includes(inputText.substring(i,i+2))){
         resultHTML += inputText.substring(i,i+2);
         i++;
-      } else if (i < inputText.length-2 && allowedWords.includes(inputText.substring(i,i+3))){
-        resultHTML += inputText.substring(i,i+3);
-        i+=2;
+      } else if (allowedWords.includes(inputText.substring(i,i+1))){
+        resultHTML += inputText.substring(i,i+1);
       } else if (inputText[i] === '\n') {
         resultHTML += "<br>";
       } else {
