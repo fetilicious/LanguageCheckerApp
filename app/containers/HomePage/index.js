@@ -25,6 +25,7 @@ import FilterInput from './FilterInput';
 
 let allowedWords = [''];
 
+// Home Page of Language App
 export default function HomePage() {
   const textArea = React.createRef();
   const resultArea = React.createRef();
