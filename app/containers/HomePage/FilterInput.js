@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
-const TextArea = styled.div`
-  height: 83vh;
+const FilterInput = styled.input`
   border: 3px solid #cccccc;
-  padding: 5px 5px 1px 5px;
+  width: 100%;
+  height: 2em;
+  margin-top: 0.5em;
   font-family: Tahoma, sans-serif;
   background-position: bottom right;
   background-repeat: no-repeat;
   overflow: auto;
 `;
 
-export default TextArea;
+export default FilterInput;

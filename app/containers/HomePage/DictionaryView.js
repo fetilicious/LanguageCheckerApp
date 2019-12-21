@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const DictionaryView = styled.div`
-  height: 75vh;
+  height: 70.5vh;
   margin-top: 1vh;
   width: 100%;
   text-align: left;
