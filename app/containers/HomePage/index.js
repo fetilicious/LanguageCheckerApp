@@ -92,7 +92,6 @@ export default function HomePage() {
         console.log(allowedWords);
         window.localStorage.setItem("allowedWords", JSON.stringify(allowedWords));
       };
-      };
       reader.readAsText(file);
     });
   }
